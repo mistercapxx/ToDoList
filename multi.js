@@ -15,7 +15,7 @@ function generateCalendar(year, month) {
     calendarBody.innerHTML = '';
 
     for (let i = 1; i <= daysInMonth; i++) {
-        const day = new Date(year, month, i);
+        // const day = new Date(year, month, i);
         const dayElement = document.createElement("div");
         dayElement.textContent = i;
         calendarBody.appendChild(dayElement);
@@ -42,27 +42,64 @@ function showContent(content) {
 
     if (content === 'Today') {
         titleElement.textContent = 'Today';
-    } else if (content === 'Inbox') {
-        titleElement.textContent = 'Inbox';
-    }
-    const storedInfo = localStorage.getItem('storedInfo');
-    const infoArray = storedInfo ? JSON.parse(storedInfo) : [];
-    const container = document.querySelector('.container');
-    container.innerHTML = '';
 
-    if (content === 'Today') {
+
+        const storedInfo = localStorage.getItem('storedInfo');
+        const infoArray = storedInfo ? JSON.parse(storedInfo) : [];
+        const container = document.querySelector('.container');
+        container.innerHTML = '';
+
         const filteredInfo = infoArray.filter(info => info.toLowerCase().includes('today'));
         displayFilteredContent(filteredInfo, container);
-        updateTitle('Today');
+        updateTitle(content);
     } else if (content === 'Inbox') {
+        titleElement.textContent = 'Inbox';
+
+        const storedInfo = localStorage.getItem('storedInfo');
+        const infoArray = storedInfo ? JSON.parse(storedInfo) : [];
+        const container = document.querySelector('.container');
+        container.innerHTML = '';
+
         displayFilteredContent(infoArray, container);
-        updateTitle('Inbox');
+        updateTitle(content);
+
+
+    }else {
+
+        titleElement.textContent = content;
+
+        const storedInfo = localStorage.getItem('storedInfo');
+        const infoArray = storedInfo ? JSON.parse(storedInfo) : [];
+        const container = document.querySelector('.container');
+        container.innerHTML = '';
+        const filteredInfo = infoArray.filter(info => info.toLowerCase().includes(content.toLowerCase()));
+        displayFilteredContent(filteredInfo, container);
+        updateTitle(content);
+
     }
-
-
 }
+const selectMonths = document.getElementById('selectMonths');
+
+const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+];
+
+
+months.forEach((month,index) => {
+    const option = document.createElement('option');
+    option.value = month;
+    option.text = month;
+    selectMonths.appendChild(option);
+});
+
+selectMonths.addEventListener('change',function (){
+    const selectedMonth = this.value;
+    showContent(selectedMonth);
+});
+
 function updateTitle(titleText) {
-    const titleElement = document.querySelectorAll('.exe');
+    const titleElement = document.querySelector('.top-center-text');
     titleElement.textContent = titleText;
     titleElement.style.fontSize = '24px';
     titleElement.style.textAlign = 'center';
