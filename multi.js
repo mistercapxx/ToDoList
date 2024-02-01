@@ -101,7 +101,7 @@ selectMonths.addEventListener('change',function (){
 function updateTitle(titleText) {
     const titleElement = document.querySelector('.top-center-text');
     titleElement.textContent = titleText;
-    titleElement.style.fontSize = '24px';
+    titleElement.style.fontSize = '40px';
     titleElement.style.textAlign = 'center';
 
 }
@@ -131,7 +131,7 @@ function displayFilteredContent(filteredInfo, container) {
         });
         container.appendChild(ul);
     } else {
-        container.textContent = `No tasks`;
+        container.innerHTML = `<p style="font-size: 30px; text-align: center;">No tasks</p>`;
     }
 }
 
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.container');
     container.addEventListener('click', function(e) {
         if (e.target.tagName === 'LI') {
-       applyUnderline(e);
+            applyUnderline(e);
             updateStoredInfo();
         }
     });
