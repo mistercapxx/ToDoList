@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="7276921.png" class="todolist-image">
+
+        <div id="taskModal" class="modal">
+            <div class="modal-content">
+              
+                <label for="taskInput">Doing Something ? </label>
+                <span class="close">&times;</span>
+                <input type="text" id="taskInput" placeholder="Enter your task">
+                <br><br>
+                <label for="importantCheckbox">
+                    <input type="checkbox" id="importantCheckbox"> Mark as Important
+                </label>
+                <br><br>
+                <button id="saveTaskBtn">Save</button>
+            </div>
+        </div>
+
+    </header>
+    <div class="snowflakes">
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+    </div>
+
+    <div class="main-part">
+        <div class="left-column">
+            <h1>To Do List</h1>
+            <section class="todo-list">
+
+                <h1 class="top-center-text">Today</h1>
+                <div class="tasks"></div>
+                <div class="navigate-days">
+                    <button class="add-new-task">New Task</button>
+                    <button onclick="showContent('Today')">Today</button>
+                    <button onclick="showContent('Inbox')">Inbox</button>
+                    <select id="selectMonths">
+                        <option value="">Search by month</option>
+                    </select>
+                </div>
+
+            </section>
+            <section>
+                <img src="Screenshot 2024-09-25 at 14.49.41.png" class="necessary-cat">
+                <h1>! First Necessity !!</h1>
+                <div class="necessary"></div>
+            </section>
+
+        </div>
+        <div class="middle-column">
+            <section class="spotify-player">
+
+
+                <h1>Spotify</h1>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/7jPi1ajPeICiEObZDzJI7S?utm_source=generator"
+                    width="80%" height="450" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </section>
+            <section class="calendar">
+                <h1>Calendar</h1>
+                <div class="calendar-only">
+                    <div class="calendar-header">
+                        <button id="prevMonthBtn">&lt;</button>
+                        <h2 id="calendarMonthYear"></h2>
+                        <button id="nextMonthBtn">&gt;</button>
+                    </div>
+                    <div class="calendar-body" id="calendarBody">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="right-column">
+            <section class="year-2025">
+                <h2 id="dynamicText">
+                    Let the <span class="year">2025</span> be Amazing
+                </h2>
+                <img class="photo" src="pngtree-happy-new-year-2025-image_15717473.jpg">
+            </section>
+        </div>
+</body>
+<script src="multi.js"></script>
+
+</html>

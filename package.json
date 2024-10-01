@@ -1,0 +1,17 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "A simple ToDo List application",
+  "main": "index.html",
+  "scripts": {
+    "start": "node index.html",
+    "build": "echo 'Building project...'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d ."
+  },
+  "homepage": "https://mistercapxx.github.io/todolist/",
+  "dependencies": {},
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}

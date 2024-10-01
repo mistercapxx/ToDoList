@@ -1,0 +1,376 @@
+body {
+  background-color: #1e1e1e;
+  font-family: 'Courier New', monospace;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 100%;
+  height: 300px;
+  background-image: url('winter-cabin-snow-forest-night-scenery-2k-wallpaper-uhdpaper.com-857@0@i.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#taskInput
+{
+  width: 350px;
+  height: 30px;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#saveTaskBtn
+{
+  padding: 10px;
+  border-radius: 10px;
+}
+.modal-content {
+  background-color: #1e1e1e;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 500px;
+}
+.todolist-image
+{
+    z-index: 999;
+    height: 150px;
+    transform: translateY(135%) translateX(50px); 
+}
+
+.main-part {
+  margin-top: 40px;
+  display: flex;
+  width: 100%;
+}
+.left-column {
+  width: 25%;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+.add-new-task {
+  font-family: 'Courier New', monospace;
+}
+.tasks
+{
+    font-size: 12px;
+}
+
+.navigate-days button {
+  height: 30px;
+  font-family: 'Courier New', monospace;
+}
+#selectMonths {
+  height: 30px;
+  font-family: 'Courier New', monospace;
+}
+
+.middle-column {
+  width: 30%;
+}
+.middle-column section {
+  padding: 15px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.middle-column h1
+{
+  font-size: 27px;
+}
+.spotify-logo
+{
+  height: 50px;
+  width: 50px;
+  transform: translateX(1230%) translateY(265px) ; 
+}
+.star
+{
+  height: 50px;
+  width: 50px;
+  transform: translateX(2490%) translateY(215px) ; 
+}
+
+.todo-list {
+  height: 450px;
+  background-color: #2d2d2d;
+  border: 12px solid #444;
+}
+
+.necessary 
+{
+
+  height: 200px;
+  background-color: #2d2d2d;
+  border: 12px solid #444;
+}
+.necessary-cat
+{
+  height: 110px;
+  transform: translateY(105%) translateX(-210%) ; 
+}
+.right-column {
+  border-radius: 8px;
+  padding: 15px;
+font-size: 17px;
+  margin: 0 auto;
+  text-align: center;
+}
+.right-column img {
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 12px;
+  width: 420px;
+}
+
+.completed {
+  text-decoration-line: line-through;
+}
+
+.plus-button {
+  position: absolute;
+  bottom: 9%;
+  left: 49%;
+  display: block;
+  padding: 10px 17px;
+  background-color: lightblue;
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+
+.top-center-text {
+  margin-top: 2%;
+  font-size: 30px;
+  text-align: center;
+}
+ul {
+  list-style: none;
+
+}
+
+li {
+  font-size: 20px;
+  margin-right: 11%;
+}
+
+
+
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px #000;
+}
+
+.snowflake,
+.snowflake .inner {
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+@keyframes snowflakes-fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(110vh);
+  }
+}
+@keyframes snowflakes-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(80px);
+  }
+}
+.snowflake {
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  animation-name: snowflakes-shake;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+.snowflake .inner {
+  animation-duration: 10s;
+  animation-name: snowflakes-fall;
+  animation-timing-function: linear;
+}
+.snowflake:nth-of-type(0) {
+  left: 1%;
+  animation-delay: 0s;
+}
+.snowflake:nth-of-type(0) .inner {
+  animation-delay: 0s;
+}
+.snowflake:first-of-type {
+  left: 10%;
+  animation-delay: 1s;
+}
+.snowflake:first-of-type .inner,
+.snowflake:nth-of-type(8) .inner {
+  animation-delay: 1s;
+}
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  animation-delay: 0.5s;
+}
+.snowflake:nth-of-type(2) .inner,
+.snowflake:nth-of-type(6) .inner {
+  animation-delay: 6s;
+}
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  animation-delay: 2s;
+}
+.snowflake:nth-of-type(11) .inner,
+.snowflake:nth-of-type(3) .inner {
+  animation-delay: 4s;
+}
+.snowflake:nth-of-type(4) {
+  left: 40%;
+  animation-delay: 2s;
+}
+.snowflake:nth-of-type(10) .inner,
+.snowflake:nth-of-type(4) .inner {
+  animation-delay: 2s;
+}
+.snowflake:nth-of-type(5) {
+  left: 50%;
+  animation-delay: 3s;
+}
+.snowflake:nth-of-type(5) .inner {
+  animation-delay: 8s;
+}
+.snowflake:nth-of-type(6) {
+  left: 60%;
+  animation-delay: 2s;
+}
+.snowflake:nth-of-type(7) {
+  left: 70%;
+  animation-delay: 1s;
+}
+.snowflake:nth-of-type(7) .inner {
+  animation-delay: 2.5s;
+}
+.snowflake:nth-of-type(8) {
+  left: 80%;
+  animation-delay: 0s;
+}
+.snowflake:nth-of-type(9) {
+  left: 90%;
+  animation-delay: 1.5s;
+}
+.snowflake:nth-of-type(9) .inner {
+  animation-delay: 3s;
+}
+.snowflake:nth-of-type(10) {
+  left: 25%;
+  animation-delay: 0s;
+}
+.snowflake:nth-of-type(11) {
+  left: 65%;
+  animation-delay: 2.5s;
+}
+
+.calendar {
+  color: #000;
+  margin: 0 auto;
+  border: 6px lightblue;
+  width: 400px;
+  font-family: 'Courier New', monospace;
+}
+.calendar-only
+{
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.calendar h1 {
+  color: white;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px lightblue;
+  padding: 17px;
+  background-color: #f0f0f0;
+}
+
+.calendar-body {
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-top: 1px solid #ccc;
+}
+
+.calendar-body div {
+  padding: 5px;
+  border-right: 2px solid lightblue;
+  border-bottom: 2px solid lightblue;
+  text-align: center;
+  background-color: white;
+}
+
+
+#prevMonthBtn,
+#nextMonthBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+#calendarMonthYear {
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+}
+
+.today
+{
+    border: 1px solid red;
+    padding: 3px;
+    border-radius: 20px;
+}
+
+.year {
+  color: white;
+}
+
+
